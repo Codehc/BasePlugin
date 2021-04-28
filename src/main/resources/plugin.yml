@@ -1,0 +1,9 @@
+name: BasePlugin
+version: 0.1.0
+author: Codehc
+main: me.codehc.baseplugin.BasePlugin
+
+#commands:
+#  name:
+#    description: desc
+#    usage: /<command>
