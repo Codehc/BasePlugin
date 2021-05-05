@@ -2,9 +2,12 @@ package me.codehc.baseplugin.commands;
 
 import me.codehc.baseplugin.BasePlugin;
 import me.codehc.baseplugin.commands.misc.TestCommand;
-import org.bukkit.command.*;
+import org.bukkit.command.PluginCommand;
+import org.bukkit.command.CommandExecutor;
+import org.bukkit.command.TabExecutor;
+import org.bukkit.command.CommandSender;
+import org.bukkit.command.Command;
 import org.bukkit.entity.Player;
-import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,7 +31,7 @@ public abstract class CommandBase implements CommandExecutor, TabExecutor {
 
     }
 
-    public static void registerCommands(JavaPlugin pl) {
+    public static void registerCommands() {
         new TestCommand();
     }
 

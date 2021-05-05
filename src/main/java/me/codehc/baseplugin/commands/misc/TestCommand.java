@@ -3,6 +3,7 @@ package me.codehc.baseplugin.commands.misc;
 import me.codehc.baseplugin.BasePlugin;
 import me.codehc.baseplugin.commands.CommandBase;
 import me.codehc.baseplugin.schedulers.Scheduler;
+
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
@@ -24,7 +25,6 @@ public class TestCommand extends CommandBase {
         Scheduler.ASYNC.runTask((runnable) -> {
             player.sendMessage("This is async! Task ID: " + runnable.getTaskId());
         });
-
     }
 
     @Override
