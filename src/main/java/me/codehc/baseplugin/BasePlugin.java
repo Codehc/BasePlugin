@@ -2,12 +2,9 @@ package me.codehc.baseplugin;
 
 import me.codehc.baseplugin.commands.CommandBase;
 import me.codehc.baseplugin.event.MoveEvent;
-import org.bukkit.Bukkit;
-import org.bukkit.ChatColor;
+
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
-
-import java.util.logging.Level;
 
 public final class BasePlugin extends JavaPlugin {
 
@@ -24,7 +21,7 @@ public final class BasePlugin extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new MoveEvent(), this);
 
         //register commands
-        CommandBase.registerCommands(INSTANCE);
+        CommandBase.registerCommands();
 
         /*
         Server already does this for us:
