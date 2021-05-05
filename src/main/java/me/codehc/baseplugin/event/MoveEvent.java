@@ -6,13 +6,17 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerMoveEvent;
 
+import java.util.logging.Level;
+
+import static org.bukkit.Bukkit.getLogger;
+
 public class MoveEvent implements Listener {
 
-    final static BasePlugin main = BasePlugin.getInstance();
-    final FileConfiguration config = BasePlugin.getInstance().getConfig();
+    final static BasePlugin main = BasePlugin.INSTANCE;
+    final FileConfiguration config = main.config;
 
     @EventHandler
     public void onMove(PlayerMoveEvent event) {
-        System.out.println("move");
+        getLogger().log(Level.INFO, "Player moved, new location: " + event.getTo().toString());
     }
 }
